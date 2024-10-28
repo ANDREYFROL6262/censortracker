@@ -51,7 +51,7 @@ export const handleInstalled = async ({ reason }) => {
     const statUrlObj = new URL(proxyUrl)
     const pathSegments = statUrlObj.pathname.split('/').filter((segment) => segment)
 
-    pathSegments[pathSegments.length - 1] = 'post-statistics'
+    pathSegments[pathSegments.length - 1] = 'post-statistics/'
 
     statUrlObj.pathname = `/${pathSegments.join('/')}`
 
