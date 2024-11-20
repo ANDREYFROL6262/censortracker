@@ -96,6 +96,7 @@ export const handleProxyOptionsMessage = (
           await ConfigManager.set({
             usePremiumProxy: true,
           })
+          await Extension.proxy.setProxy()
         }
       })()
       break
@@ -107,6 +108,7 @@ export const handleProxyOptionsMessage = (
           await ConfigManager.set({
             usePremiumProxy: true,
           })
+          await Extension.proxy.setProxy()
         }
         sendResponse({ hasNotExpired: !isPremiumExpired })
       })()
@@ -119,7 +121,7 @@ export const handleProxyOptionsMessage = (
         await Extension.proxy.setProxy()
       })()
       break
-    case 'removeCustomProxy':
+    case 'useDefaultProxy':
       ConfigManager.set({ usePremiumProxy: false })
       Extension.proxy.removeCustomProxy().then(() => {
         Extension.proxy.setProxy()

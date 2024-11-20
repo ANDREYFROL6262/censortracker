@@ -94,7 +94,7 @@ import { sendConfigFetchMsg, sendExtensionCallMsg, sendTransitionMsg } from './m
     if (event.target.value === 'default') {
       proxyOptionsInputs.classList.add('hidden')
       proxyServerInput.value = ''
-      sendExtensionCallMsg(source, 'removeCustomProxy')
+      sendExtensionCallMsg(source, 'useDefaultProxy')
     } else if (event.target.value === 'custom') {
       proxyOptionsInputs.classList.remove('hidden')
     } else if (event.target.value === 'premium') {
