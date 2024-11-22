@@ -114,7 +114,7 @@ export const setProxy = async () => {
       ignoreUrl,
       proxyUrl,
       registryUrl,
-      specifics: { cooperationRefusedORIUrl },
+      specifics,
     },
     premiumProxyServerURI,
     ignoredHosts,
@@ -126,7 +126,7 @@ export const setProxy = async () => {
     'premiumBackendURL',
   )
   const serviceHosts = [
-    cooperationRefusedORIUrl,
+    specifics?.cooperationRefusedORIUrl,
     customRegistryUrl,
     geoIPServiceURL,
     premiumBackendURL,
